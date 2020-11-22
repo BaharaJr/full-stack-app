@@ -141,3 +141,8 @@
   "tasks": []
 }
 ```
+
+## Block Diagram
+<p align="center">
+  <img src="blockdiagram.png" width="100%" alt="Block Diagram">
+</p>
