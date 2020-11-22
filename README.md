@@ -32,7 +32,7 @@
 
 ## API Functionalities Testing
 
-### I implemented [OpenAPI Specification](https://swagger.io/specification/) for my API documentation that is hosted together with the backend app at this URL: `https://bunny-todo-backend.herokuapp.com/documentation` the app can be thoroughly tested for all API functionalities.
+### I implemented [OpenAPI Specification](https://swagger.io/specification/) for my API documentation that is hosted together with the backend app at this [URL](https://bunny-todo-backend.herokuapp.com/documentation) the app can be thoroughly tested for all API functionalities.
 
 ### Creating a Task
 
