@@ -20,6 +20,12 @@
 - Complete/Uncomplete user's tasks
 - Edit User
 
+### Basic Functionalities
+* The users and tasks sections are in tabular form, the most right column shows actions that can be performed on a particular entity.
+* For users, you can edit, view tasks and delete a user.
+* For tasks, you can complete or unconplete a task depending on state and you can delete the task.
+* Deleting a user, deletes the associated tasks.
+* A newly added task must belong to a user.
 ## Backend
 
 ### Hosting URL: `https://bunny-todo-backend.herokuapp.com/`
