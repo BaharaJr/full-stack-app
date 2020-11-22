@@ -1,0 +1,67 @@
+<div *ngIf="datas">
+  <h1>Viewing {{datas.user.firstname}}'s Tasks</h1>
+</div>
+<table class="table table-hover">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">S/N</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">State</th>
+      <th scope="col">Actions</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="
+    let task of tasks;
+    let count = index
+  ">
+      <tr *ngIf="tasks.length>0">
+      <td>{{ count + 1 }}</td>
+      <td>{{ task.title }}</td>
+      <td>{{ task.description }}</td>
+      <td>{{ task.state }}</td>
+      <td>
+        <button
+          mat-icon-button
+          [matMenuTriggerFor]="menu"
+          aria-label="Example icon-button with a menu"
+        >
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button *ngIf="task.state=='To Do'"
+          (click)="onComplete(task)"
+            mat-menu-item
+          >
+            <mat-icon>check_circle</mat-icon>
+            <span>Complete</span>
+          </button>
+          <button *ngIf="task.state=='DONE'"
+          (click)="onUnComplete(task)"
+            mat-menu-item
+          >
+            <mat-icon>cancel</mat-icon>
+            <span>Un-Complete</span>
+          </button>
+
+          <button
+          (click)="onDeleteTask(task.id)"
+            mat-menu-item
+          >
+            <mat-icon>delete</mat-icon>
+            <span>Delete</span>
+          </button>
+        </mat-menu>
+      </td>
+    </tr>
+    </ng-container>
+    <ng-container>
+      <tr *ngIf="!tasks.length">
+        <td><h1>No available tasks</h1></td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

@@ -1,0 +1,17 @@
+
+mat-form-field {
+  width: 100%;
+}
+
+.filter {
+  position: fixed;
+  width: 25vh;
+}
+
+
+button {
+  margin: 5px;
+}
+.cancel {
+  color: rgb(255, 152, 0);
+}
